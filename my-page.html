@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Semi-MyPage</title>
+
+        <link rel="stylesheet" href ="my-page.css">
+
+        <!-- 아이콘 -->
+        <script src="https://kit.fontawesome.com/ac58eafae7.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <!-- 수정해야 할 부분 ⓐ와 같이 표시함. -->
+        <main>
+            <!-- Main페이지와 이어지는 nav-bar -->
+            <nav>
+                <section class = "logo">
+                    <!-- ① 로고 이미지? 및 버튼으로 변경  -->
+                    <a>MovieInSight</a>
+                </section>
+                
+                <section class = "movie-search-area">
+                    <form action="#" name="search-form"> <!-- ② action 값 변경-->
+                        <fieldset>
+                            <input type="search" id="query" name="query"
+                            autocomplete="on" placeholder="검색">
+                            <button id="search-btn" class="fa-solid fa-magnifying-glass"></button>
+                        </fieldset>
+                    </form>
+
+                    <div class = "main-sort">
+                        <!-- ③ a 태그 입력하기 진행하기! main페이지로 이동할 수 있게  -->
+                        <a>#인기순</a>
+                        <a>#최신순</a>
+                        <a>#장르별</a>
+                    </div>
+                </section>
+
+                <section class = "user-function">
+                    <!-- ④ 버튼으로 만들어야 하나? -->
+                    <div class = "user-login">
+                        <h5>LOGIN</h5>
+                    </div>
+
+                     <!-- ⑤ 버튼으로 만들어야 하나? -->
+                    <div class = "user-mypage">
+                        <div class = "mypage-wrapper">
+                            <!-- ⑥이거 나중에 유저 사진으로 변경하기 -->
+                            <a class="fa-solid fa-user"></a>
+                        </div>
+                    </div>
+                </section>
+            </nav>
+
+
+            <aside class = "my-page-tag">
+                <a>즐겨찾기</a>
+                <a>방문기록</a>
+                <a>내가 작성한 댓글</a>
+                <a>회원정보 수정</a>
+            </aside>
+
+            <section class ="mypage-content">
+                <section class = "mypage-favorite">
+
+                    <div class = "mypage-title">
+                        <h1>My Page</h1>
+                        <h3>User님, 환영합니다.</h3>
+                        <!-- ①User는 로그인한 사람 JSP에서 변경해야함 -->
+                    </div>
+
+
+                </section>
+
+
+                <div style="height: 500px;"></div>
+            </section>
+            
+
+          
+        </main>  
+    </body>
+</html>
