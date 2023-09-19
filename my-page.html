@@ -39,10 +39,11 @@
                 </section>
 
                 <section class = "user-function">
-                    <!-- ④ 버튼으로 만들어야 하나? -->
-                    <div class = "user-login">
-                        <h5>LOGIN</h5>
-                    </div>
+                    <!-- ④ a 태그로 만들기! -->
+                    <a class = "user-login">
+                        <!-- <a>LOGIN</a> -->
+                        LOGIN
+                    </a>
 
                      <!-- ⑤ 버튼으로 만들어야 하나? -->
                     <div class = "user-mypage">
@@ -63,19 +64,117 @@
             </aside>
 
             <section class ="mypage-content">
-                <section class = "mypage-favorite">
+                <!--  마이페이지 첫 번째 구간 -->
+                <section class = "mypage"  id = "mypage-favorite">
 
                     <div class = "mypage-title">
-                        <h1>My Page</h1>
-                        <h3>User님, 환영합니다.</h3>
+
+                       <p>My Page</p>
+                       
+                        <p>User님, 환영합니다.</p>
+                        <!--<h1>My Page</h1>
+                        <h1>User님, 환영합니다.</h1> -->
                         <!-- ①User는 로그인한 사람 JSP에서 변경해야함 -->
                     </div>
 
+                    <div class = "favorite-setting">
+                        <a class = "movie-favorite-btn">
+                            <i class="fa-solid fa-star"></i>
+                            영화 즐겨찾기
+                        </a>
+
+                        <a class = "cienma-favorite-btn">
+                            <i class="fa-solid fa-star"></i>
+                            영화관 즐겨찾기
+                        </a>
+                    </div>
+
+                    <div class = "favorite-list">
+                        <!-- ③ 가로 슬라이드 만들기!! wrapper 더 만들어야 하나? 아니면 안만들어도 되는지 모르겠음
+                        Carousel Slider 이용하기-->
+                        <div class = "favorite-list-wrapper ">
+                            <!-- ② src은 JSP에서?? DB에서?? 변경해야 함 -->
+                            <img src = "ex-img/엘리멘탈.jpg">
+                        </div>
+
+                        <div class = "favorite-list-wrapper ">
+                            <img src = "ex-img/모아나.jpg">
+                        </div>
+
+                        <div class = "favorite-list-wrapper ">
+                            <img src = "ex-img/미니언즈.jpg">
+                        </div>
+
+                        <div class = "favorite-list-wrapper ">
+                            <img src = "ex-img/주토피아.jpg">
+                        </div>
+                        <!-- 누르면 옆으로 슬라이드  -->
+                        <div class ="next-btn-container">
+                            <button type="button" class = "next-btn">
+                            </button>
+                        </div>
+
+                    </div>
 
                 </section>
 
 
-                <div style="height: 500px;"></div>
+                <!-- 마이페이지 두 번째 구간 -->
+                <section class = "mypage"  id = "mypage-visit-history">
+
+                    <div class = "visit-history-container">
+                        <div class = "visit-history-title">
+                            방문기록
+                        </div>
+                    </div>
+
+                    <!-- ②방문기록 리스트!! (근데,, 리스트가 없으면?? ) -->
+                    <div class = "visit-history-content-container">
+                        <!-- ① 스크롤 해서 가져오기! -->
+                        <div class = "visit-history-content">
+                            <div class = "visit-history-list" id = "vh-list1">
+                                <div class = "history-img-container">
+                                    <img src ="ex-img/라푼젤.jpg">
+                                </div>
+                            </div>
+
+                            <div class = "visit-history-list" id = "vh-list2">
+                                <div class = "history-img-container">
+
+                                </div>
+                            </div>
+
+                            <div class = "visit-history-list" id = "vh-list3">
+                                <div class = "history-img-container">
+
+                                </div>
+                            </div>
+
+                            
+                            <div class = "visit-history-list" id = "vh-list4">
+                                <div class = "history-img-container">
+
+                                </div>
+                            </div>
+
+                            <!-- 스크롤이면 버튼 따로 필요 없지 않을듯 -->
+
+                        </div>
+                    </div>
+
+                </section>
+
+
+
+
+
+
+
+
+
+
+
+                
             </section>
             
 
