@@ -288,17 +288,22 @@ aside > a{
 
     width: 30px;
     height: 20px;
-    background-color: wheat;
 
-    border: none;
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid transparent;
+    border-top: 30px solid transparent;
+    border-left: 40px solid skyblue;
+    border-right: 40px solid transparent;
+
+    background-color: transparent;
 }
-
-
 
 /* ======================================================================= */
 
-/* 마이페이지-방문기록 */
-.visit-history-container{
+/* 마이페이지-방문기록 및 내가 작성한 댓글 */
+.visit-history-container,
+.comment-list-container{
     flex-basis: 10%;
     width: 1100px;
     color: black;
@@ -313,13 +318,17 @@ aside > a{
     align-items: center;
 }
 
-#mypage-visit-history{
+#mypage-visit-history,
+#mypage-comment-list{
     padding: 20px;
 }
 
-.visit-history-content-container{
+.visit-history-content-container,
+.comment-list-content-container{
     flex-basis: 90%;
     padding: 20px;
+
+    background-color: rebeccapurple;
 
     display: flex;
     justify-content: center;
@@ -350,13 +359,111 @@ aside > a{
 }
 
 .history-img-container{
+    background-color: red;
+    /* margin: 5px 0px; */
     border-radius: 50px;
     flex-basis: 25%;
+
+    width: 140px;
+    height: 130px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
 }
 
 .history-img-container > img{
     width: 100%;
+    /* height: 100%; */
 }
+
+.history-content-container{
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+}
+
+.history-content-container *:nth-child(1){
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.history-content-container *:nth-child(2){
+    flex-basis: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.history-del-btn{
+    flex-basis: 5%;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 10px;
+    background-color: wheat;
+    color: black;
+    font-weight: bold;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ======================================================================= */
+
+/* 마이페이지-내가 작성한 댓글 */
+
+.comment-list-content-container{
+    flex-basis: 85%;
+}
+
+.comment-list-btn-container{
+    flex-basis: 5%;
+}
+
+/* 댓글 조회 할 큰 틀 */
+.comment-list-content{
+    flex-basis: 100%;
+
+    width: 1100px;
+    border-radius: 50px;
+    border : 2px solid white;
+
+    /* 목록 정렬! */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.comment-list{
+    flex-basis: 10%;
+    border: 2px solid whitesmoke;
+
+    padding : 0px 50px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
