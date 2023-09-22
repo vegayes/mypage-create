@@ -9,8 +9,12 @@
 
 a, button{
     cursor: pointer;
+    /* color : white; */
 }
 
+html {
+    scroll-behavior: smooth;
+  }
 
 
 main{
@@ -27,8 +31,6 @@ main{
     height: 5500px; */
 
 }
-
-
 
 
 /* ========================================================================= */
@@ -135,6 +137,7 @@ nav section:nth-child(2){
     flex-basis: 50%;
     padding-left: 50px;
     font-size: 30px;
+
 }
 
 .mypage-wrapper{
@@ -175,6 +178,7 @@ aside{
 aside > a{
     margin-bottom: 40px;
     font-size: 25px;
+    color: white;
 }
 
 
@@ -187,6 +191,17 @@ aside > a{
 .mypage{
     height: 820px;
 
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px solid aqua ;
+}
+
+.mypage-info{
+
+    height: 1220px;
     display: flex;
     /* flex-wrap: wrap; */
     flex-direction: column;
@@ -316,23 +331,28 @@ aside > a{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
 }
 
 #mypage-visit-history,
-#mypage-comment-list{
+#mypage-comment-list,
+#mypage-modify-member-info{
     padding: 20px;
+
 }
 
 .visit-history-content-container,
-.comment-list-content-container{
+.modify-member-info-container{
     flex-basis: 90%;
     padding: 20px;
 
-    background-color: rebeccapurple;
-
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    
+    overflow: auto
 }
 
 .visit-history-content{
@@ -420,20 +440,24 @@ aside > a{
 /* 마이페이지-내가 작성한 댓글 */
 
 .comment-list-content-container{
-    flex-basis: 85%;
-}
+    flex-basis: 95%;
 
-.comment-list-btn-container{
-    flex-basis: 5%;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* 댓글 조회 할 큰 틀 */
 .comment-list-content{
-    flex-basis: 100%;
+    flex-basis: 95%;
 
     width: 1100px;
     border-radius: 50px;
-    border : 2px solid white;
+    /* border : 2px solid white; */
+    border : 2px solid red;
 
     /* 목록 정렬! */
     display: flex;
@@ -441,13 +465,155 @@ aside > a{
     flex-wrap: wrap;
 }
 
+.comment-list-btn-container{
+    flex-basis: 5%;
+    width: 100%;
+    /* border : 2px solid yellow; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+    /* margin-top: 20px; */
+    /* ?????????????? */
+}
+
+
+
+
 .comment-list{
     flex-basis: 10%;
-    border: 2px solid whitesmoke;
+    /* border : 2px solid rebeccapurple; */
 
     padding : 0px 50px;
     display: flex;
     align-items: center;
+}
+
+.comment-del-btn,
+.comment-list-all-btn{
+    flex-basis: 5%;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 10px;
+    background-color: rgb(230, 230, 230);
+    color: black;
+    font-weight: bold;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-replace-btn,
+.comment-list-all-del-btn{
+    flex-basis: 10%;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 10px;
+    background-color: wheat;
+    color: black;
+    font-weight: bold;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-content-container,
+.comment-list-btn-container > p{
+    flex-basis: 85%;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0px 40px;
+    align-items: center;
+}
+
+
+
+/* ======================================================================= */
+
+/* 마이페이지-회원정보 수정 */
+
+.modify-member-info-title{
+    flex-basis: 10%;
+    width: 1100px;
+
+    font-size: 50px;
+    font-weight: bold;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.modify-member-info-container{
+    flex-basis: 90%;
+    border: 2px solid wheat;
+}
+
+
+.modify-member-info-content{
+    flex-basis: 100%;
+    width: 1159px;
+    height: 1500px;
+    border-radius: 50px;
+    background: linear-gradient(180deg, #000 0%, rgba(158, 185, 255, 0.68) 45.83%, rgba(255, 255, 255, 0.00) 99.99%, rgba(255, 255, 255, 0.00) 100%);
+    /* 목록 정렬! */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* 프로필 */
+.member-info-profile-container{
+    flex-basis: 35%;
+
+    padding: 20px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.member-profile-wrapper{
+    width: 280px;
+    height: 280px;
+    border: 3px solid #FFF;
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+} 
+
+.member-profile-wrapper>img{
+    width: 100%;
+}
+
+.member-profile-modify-btn{
+    background-color: #DCEFF3;;
+    border-radius: 10px;
+    width: 441px;
+    height: 50px;
+
+    color: #8B8B8B;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px
+}
+
+.member-profile-modify-btn > *{
+    margin: 0px 10px;
 }
 
 
@@ -455,10 +621,146 @@ aside > a{
 
 
 
+/*변경 내용*/
+.member-info-container{
+    flex-basis: 52%;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.modify-content-container{
+    flex-basis: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+.modify-title{
+    flex-basis: 25%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.modify-content{
+    flex-basis: 50%;
+
+    display: flex;
+    align-items: center;
+}
+
+.modify-content-input{
+    flex-basis: 100%;
+
+    font-size: 30px;
+    width: 526px;
+    height: 70px;   
+    background: #D9D9D9;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    padding: 10px;
+    
+}
+
+.modify-content-input >i{
+    flex-basis: 15%;
+    color: black;
+    font-size:40px;
+    text-align: center;
+}
+
+.modify-content-input >input{
+    flex-basis: 50%;
+    color: #8B8B8B;
+    font-size: 35px;
+    font-weight: bold;
+    border: none;
+    outline : none;
+    background-color: transparent;
+    padding: 15px;
+}
+
+.validation-content{
+    flex-basis: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.modify-content-btn{
+    flex-basis: 50%;
+
+    display: flex;
+}
+
+.modify-gender{
+    flex-basis: 50%;
+
+    width: 148px;
+    height: 71px;
+
+    border-radius: 20px;
+    background: #F1F1F1;
+    color: black;
+    font-size: 36px;
+
+    margin : 0px 30px 0px 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+}
 
 
 
+/* 변경 내용 */
+.member-info-option-container{
+    flex-basis: 13%;
+} 
 
+.member-info-option-container{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.member-info-option-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0px 50px 0px 0px;
+
+    width: 416px;
+    height: 90px;
+
+    background: rgba(255, 255, 255, 0.50);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+footer{
+    height: 300px;
+}
+footer>img{
+    height: 100%;
+    width: 100%;
+}
 
 
 
