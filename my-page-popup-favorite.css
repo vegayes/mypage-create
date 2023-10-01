@@ -12,32 +12,43 @@ main{
 
     color: white;
 
-    min-height: 1000px;
+    min-height: 850px;
     
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     /* align-items: center; */
 }
 
 
 .popup-title{
-    height: 200px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    border: 2px solid white;
 
-    font-size: 50px;
+    /* font-size: 50px; */
 
-    border: 2px solid yellow;
+    font-family: Inknut Antiqua;
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.73) 33.43%, #0500FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+    /* border: 2px solid yellow; */
 }
 
 .favorite-list-container{
     width: 1000px;
-    height: 200px;
+    height: 400px;
 
     margin: 20px;
     
@@ -47,7 +58,6 @@ main{
 
 
 table{
-    background-color: red;
     width: 1000px;
     border-spacing: 0;
 }
@@ -60,42 +70,133 @@ table{
 tr{
     flex-basis: 100%;
 
-    border: 2px solid black;
+    /* border: 2px solid black; */
 
-    background-color: blue;
 
     display: flex;
 
+    padding: 5px 0px;
 }
 
-th, td{
-    border: 2px solid black;
+thead > tr{
+    background-color: orange;
+}
+
+
+
+th,td{
+    /* border: 2px solid black; */
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+/* .favorite-list-table > tr:nth-of-type(1){
+    position: sticky;
+    top: 0px;
+
+    background-color: orange;
+} */
+
+/* table.sticky thead tr{
+    position: sticky;
+    top: 500px;
+} */
+
+.favorite-list-table thead {
+    position: sticky;
+    top: 0;
+}
+
+.favorite-list-table thead th{
+    background-color: orange;  
+}
+
+.favorite-list-img{
+    flex-basis: 10%;
+
+    /* background-color: rebeccapurple; */
+    
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+}
+
+.favorite-list-img-wrapper{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.favorite-list-img-wrapper > img{
+    width: 100%;
+}
+
+
+.favorite-list-title{
+    flex-basis: 40%;
+
+    /* background-color: yellow; */
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.favorite-list-img{
-    flex-basis: 10%;
-
-    background-color: rebeccapurple;
-}
-
-.favorite-list-title{
-    flex-basis: 40%;
-
-    background-color: yellow;
-}
-
 .favorite-list-date{
     flex-basis: 40%;
 
-    background-color: green;
+    /* background-color: green; */
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .favorite-list-check{
     flex-basis: 9%;
 
-    background-color: gray;
+    /* background-color: gray; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* #check_btn{
+    display:none;
+}
+  
+#check_btn + label{
+    cursor:pointer;
+}
+  
+#check_btn + label > span{
+    vertical-align: middle;
+    padding-left: 5px;
+}*/
+  
+  /* label:before에 체크하기 전 상태 CSS */
+/* #check_btn + label:before{
+    content:"";
+    display:inline-block;
+    width:17px;
+    height:17px;
+    border:2px solid #F47C7C;
+    border-radius: 4px;
+    vertical-align:middle;
+} */
+    
+  /* label:before에 체크 된 상태 CSS */  
+/* #check_btn:checked + label:before{
+    content:"";
+    background-color:#F47C7C;
+    border-color:#F47C7C;
+    background-image: url('https://www.selecto.co.kr/assets/images/main/storeinfo-location/ic/c-check-ic.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+}  */
+
