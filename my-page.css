@@ -447,18 +447,46 @@ aside > a{
 /* 마이페이지-내가 작성한 댓글 */
 
 .comment-list-content-container{
-    flex-basis: 95%;
+    flex-basis: 80%;
 
-    padding: 20px;
-
+    /* padding: 20px; */
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    /* border: 2px solid yellow; */
+
+    overflow: auto;
+    overflow-x: hidden;
 }
 
+
+.comment-list-content-container::-webkit-scrollbar{
+    width: 15px;
+}
+
+.comment-list-content-container::-webkit-scrollbar{
+    background: #101322;
+}
+
+.comment-list-content-container::-webkit-scrollbar-thumb{
+    height: 15%;
+    background-color:#070583;
+    border-radius: 10px;
+}
+
+
+.comment-list-del-container > table{
+    flex-basis: 5%;
+    width: 1020px;
+    
+}
+
+
 /* 댓글 조회 할 큰 틀 */
-.comment-list-content{
+.comment-list-content-col{
     flex-basis: 95%;
 
     width: 1100px;
@@ -484,9 +512,6 @@ aside > a{
     /* margin-top: 20px; */
     /* ?????????????? */
 }
-
-
-
 
 .comment-list{
     flex-basis: 10%;
@@ -537,6 +562,64 @@ aside > a{
     padding: 0px 40px;
     align-items: center;
 }
+
+
+
+
+.comment-list-table{
+
+    width: 1000px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-list-col{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.comment-list-check{
+    flex-basis: 10%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-list-content{
+    flex-basis: 50%;
+}
+
+.comment-list-date{
+    flex-basis: 30%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.comment-list-edit{
+    flex-basis: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-list-edit > button{
+    width: 60px;
+    height: 30px;
+}
+
+.comment-list-del-btn{
+    width: 200px;
+    height: 30px;
+    margin-left: 60px;
+}
+
 
 
 

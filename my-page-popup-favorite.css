@@ -50,11 +50,28 @@ main{
     width: 1000px;
     height: 400px;
 
-    margin: 20px;
+    /* margin: 20px 20px 0px 20px; */
+
+    margin : 0px;
     
     overflow: auto;
     overflow-x: hidden;
 }
+
+.favorite-list-container::-webkit-scrollbar{
+    width: 15px;
+}
+
+.favorite-list-container::-webkit-scrollbar{
+    background: #101322;
+}
+
+.favorite-list-container::-webkit-scrollbar-thumb{
+    height: 15%;
+    background-color:#070583;
+    border-radius: 10px;
+}
+
 
 
 table{
@@ -62,10 +79,6 @@ table{
     border-spacing: 0;
 }
 
-.favorite-list-container::-webkit-scrollbar-thumb {
-    background: rgba(220, 20, 60); /* 스크롤바 색상 */
-    border-radius: 10px; /* 스크롤바 둥근 테두리 */
-}
 
 tr{
     flex-basis: 100%;
@@ -200,3 +213,20 @@ th,td{
     background-position: 50%;
 }  */
 
+.favorite-delet-btn-container{
+    width: 1000px;
+    height: 30px;
+    display: flex;
+    justify-content: end;
+    /* background-color: blanchedalmond; */
+    padding: 2px 35px;
+}
+
+.favorite-deletAll-btn-container{
+    width: 1000px;
+    height: 30px;
+    display: flex;
+    justify-content: end;
+    /* background-color: blanchedalmond; */
+    padding: 2px;
+}
