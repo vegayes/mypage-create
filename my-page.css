@@ -254,7 +254,7 @@ aside > a{
     display: flex;
 }
 
-.favorite-setting > a {
+.favorite-setting > a:not(:nth-of-type(3)) {
     background-color: white;
     color: black;
     border: 2px solid black;
@@ -267,10 +267,23 @@ aside > a{
 }
 
 /* 영화관 버튼 (비활성화일 때)  */
-.cienma-favorite-btn {
+.cinema-favorite-btn {
     background-color: white;
     opacity: 0.5;
     color : white
+}
+
+/* style 바꾸기 */
+.edit-favorite-btn{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left:  700px;
+
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px 20px;
 }
 
 
@@ -279,6 +292,8 @@ aside > a{
 
     display: flex;
     align-items: center;
+
+    border: 2px solid yellow;
 }
 
 
@@ -844,6 +859,10 @@ aside > a{
     font-weight: bold;
 }
 
+
+.red{
+    background-color: red;
+}
 footer{
     height: 300px;
 }
@@ -852,9 +871,6 @@ footer>img{
     width: 100%;
 }
 
-.red{
-    background-color: rgba(255, 0, 0, 0.50);
-}
 
 
 

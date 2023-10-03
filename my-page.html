@@ -83,15 +83,21 @@
                             영화 즐겨찾기
                         </a>
 
-                        <a class = "cienma-favorite-btn">
+                        <a class = "cinema-favorite-btn">
                             <i class="fa-solid fa-star"></i>
                             영화관 즐겨찾기
                         </a>
+
+                        <a class = "edit-favorite-btn" id = "favorite-popup">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </a>
                     </div>
+
 
                     <div class = "favorite-list">
                         <!-- ③ 가로 슬라이드 만들기!! wrapper 더 만들어야 하나? 아니면 안만들어도 되는지 모르겠음
                         Carousel Slider 이용하기-->
+                        <!-- 누르면 옆으로 슬라이드  -->  
 
                         <!-- ④ 즐겨찾기가 없는 경우 jsp로 loop 값. -->
                         <div class = "favorite-list-wrapper ">
@@ -471,7 +477,7 @@
                         <table>
                             <tr class = "comment-list-col">
                                 <td class = "comment-list-check">
-                                    <input type="checkbox" name = "comment-All">
+                                    <input type="checkbox" name = "comment-All" id = "comment-del-All">
                                 </td>
                                 <td class = "comment-list-content">전체선택
 
@@ -512,6 +518,7 @@
 
                                 <!-- ① 프로필 사진 변경하는 버튼 -->
                                 <div class = "member-profile-modify-btn">
+                                    <!-- <input type="file"> -->
                                     <i class="fa-solid fa-camera-retro"></i>
                                     프로필 사진 변경
                                 </div>
@@ -597,7 +604,6 @@
                                     </div>
 
                                     <div class = "validation-content">
-                                   
                                     </div>
                                 </div>
                                 
@@ -627,5 +633,7 @@
         <footer>
             <img src="ex-img/footer-img.png">
         </footer>
+
+        <script src = "my-page.js"></script>
     </body>
 </html>
