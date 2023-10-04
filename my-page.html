@@ -77,13 +77,13 @@
                         <!-- ①User는 로그인한 사람 JSP에서 변경해야함 -->
                     </div>
 
-                    <div class = "favorite-setting">
-                        <a class = "movie-favorite-btn">
+                    <div class = "favorite-setting" >
+                        <a class = "movie-favorite-btn" id = "movie-favorite-btn">
                             <i class="fa-solid fa-star"></i>
                             영화 즐겨찾기
                         </a>
 
-                        <a class = "cinema-favorite-btn">
+                        <a class = "cinema-favorite-btn" id = "cinema-favorite-btn">
                             <i class="fa-solid fa-star"></i>
                             영화관 즐겨찾기
                         </a>
@@ -93,15 +93,10 @@
                         </a>
                     </div>
 
+                    <div class = "favorite-list" id = "movie-favorite-container" >
 
-                    <div class = "favorite-list">
-                        <!-- ③ 가로 슬라이드 만들기!! wrapper 더 만들어야 하나? 아니면 안만들어도 되는지 모르겠음
-                        Carousel Slider 이용하기-->
-                        <!-- 누르면 옆으로 슬라이드  -->  
-
-                        <!-- ④ 즐겨찾기가 없는 경우 jsp로 loop 값. -->
                         <div class = "favorite-list-wrapper ">
-                            <!-- ② src은 JSP에서?? DB에서?? 변경해야 함 -->
+
                             <img src = "ex-img/엘리멘탈.jpg">
                         </div>
 
@@ -116,12 +111,41 @@
                         <div class = "favorite-list-wrapper ">
                             <img src = "ex-img/주토피아.jpg">
                         </div>
+
+                        <div class ="next-btn-container">
+                            <button type="button" class = "next-btn">
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class = "favorite-list" id = "cinema-favorite-container" style = "display: none;">
+                        <!-- ③ 가로 슬라이드 만들기!! wrapper 더 만들어야 하나? 아니면 안만들어도 되는지 모르겠음
+                        Carousel Slider 이용하기-->
+                        <!-- 누르면 옆으로 슬라이드  -->  
+
+                        <!-- ④ 즐겨찾기가 없는 경우 jsp로 loop 값. -->
+                        <div class = "favorite-list-cinema-wrapper">
+                            <!-- ② src은 JSP에서?? DB에서?? 변경해야 함 -->
+                            <img src = "ex-img/4DX.jpg">
+                        </div>
+
+                        <div class = "favorite-list-cinema-wrapper">
+                            <img src = "ex-img/CGV 왕십리.png">
+                        </div>
+
+                        <div class = "favorite-list-cinema-wrapper">
+                            <img src = "ex-img/CGV 용상아이파크몰.png">
+                        </div>
+
+                        <div class = "favorite-list-cinema-wrapper">
+                            <img src = "ex-img/씨네 리빙룸.jpg">
+                        </div>
                         <!-- 누르면 옆으로 슬라이드  -->
                         <div class ="next-btn-container">
                             <button type="button" class = "next-btn">
                             </button>
                         </div>
-
                     </div>
 
                 </section>
@@ -153,7 +177,9 @@
                                 </div>
                                 <!-- ⑤  삭제 버튼 -> 팝업으로 연결시키기. (근데 팝업하려면 button으로 해야하나?) -->
                                 <div class = "history-del-btn">
-                                    삭제
+                                    <button>
+                                        삭제
+                                    </button>
                                 </div>
                             </div>
 
@@ -168,7 +194,9 @@
                                 </div>
                                 <!-- ⑤  삭제 버튼 -> 팝업으로 연결시키기. (근데 팝업하려면 button으로 해야하나?) -->
                                 <div class = "history-del-btn">
-                                    삭제
+                                    <button>
+                                        삭제
+                                    </button>
                                 </div>     
                             </div>
 
@@ -183,7 +211,9 @@
                                 </div>
                                 <!-- ⑤  삭제 버튼 -> 팝업으로 연결시키기. (근데 팝업하려면 button으로 해야하나?) -->
                                 <div class = "history-del-btn">
-                                    삭제
+                                    <button>
+                                        삭제
+                                    </button>
                                 </div>                                
                             </div>
 
@@ -199,8 +229,11 @@
                                 </div>
                                  <!-- ⑤  삭제 버튼 -> 팝업으로 연결시키기. (근데 팝업하려면 button으로 해야하나?) -->
                                  <div class = "history-del-btn">
-                                    삭제
-                                </div>                               
+                                    <button>
+                                        삭제
+                                    </button>
+                                </div>     
+                      
                             </div>
 
                             <!-- 스크롤이면 버튼 따로 필요하지 않을듯 -->

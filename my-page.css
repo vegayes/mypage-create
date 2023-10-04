@@ -250,8 +250,10 @@ aside > a{
     /* width: 360px; */
     /* height: 60px; */
     /* background-color: rebeccapurple; */
-    align-self: flex-start;
+    /* align-self: flex-start; */
+    
     display: flex;
+    justify-content: space-around;
 }
 
 .favorite-setting > a:not(:nth-of-type(3)) {
@@ -279,7 +281,7 @@ aside > a{
     color: black;
     border: 2px solid black;
     border-radius: 10px;
-    margin-left:  700px;
+    margin-left:  550px;
 
     font-size: 28px;
     font-weight: bold;
@@ -293,14 +295,12 @@ aside > a{
     display: flex;
     align-items: center;
 
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
 }
 
 
-
-
 .favorite-list-wrapper{
-    flex-basis: 20%;
+    flex-basis: 25%;
 
     width: 250px;
     height: 250px;
@@ -309,11 +309,31 @@ aside > a{
     border: 2px solid white;
     margin : 0px 20px;
     /* margin-bottom: 200px; */
+}
 
+.favorite-list-cinema-wrapper{
+    flex-basis: 25%;
+
+    width: 315px;
+    height: 250px;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 2px solid white;
+    margin : 0px 10px;
+    /* margin-bottom: 200px; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;   
 }
 
 
 .favorite-list-wrapper > img {
+    width: 100%;
+}
+
+.favorite-list-cinema-wrapper > img {
+    height: 100%;
     width: 100%;
 }
 
@@ -454,6 +474,12 @@ aside > a{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.history-del-btn > button{
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
 }
 
 
@@ -631,9 +657,15 @@ aside > a{
 
 .comment-list-del-btn{
     width: 200px;
-    height: 30px;
+    height: 35px;
     margin-left: 60px;
+
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+
 }
+
 
 
 
