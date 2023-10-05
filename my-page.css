@@ -499,8 +499,8 @@ aside > a{
 
     /* border: 2px solid yellow; */
 
-    /* overflow: auto;
-    overflow-x: hidden; */
+    overflow: auto;
+    overflow-x: hidden;
 }
 
 
