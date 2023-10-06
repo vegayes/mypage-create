@@ -12,7 +12,7 @@ main{
 
     color: white;
 
-    min-height: 850px;
+    min-height: 550px;
     
     display: flex;
     flex-direction: column;

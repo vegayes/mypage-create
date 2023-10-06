@@ -2,7 +2,7 @@
 document.getElementById("favorite-popup").addEventListener("click",function(){
     window.open("http://192.168.50.200:5501/my-page-popup-favorite.html",
     "팝업 즐겨찾기",
-    "width=1200, height=850, top=100, left=400");
+    "width=900, height=570, top=200, left=540");
 });
 
 
