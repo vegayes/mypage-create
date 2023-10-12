@@ -908,10 +908,47 @@ footer>img{
 
 
 
+/* =============================== */
+/* 체크박스 디자인 */
 
+/* 기존 체크박스 해제 */
+input[type="checkbox"] {display: none;}
 
+/* 체크박스 labe 값 이용 */
+/* input[type="checkbox"] + label {
+    display: inline-block; width:17px; height: 17px; background: #fa3062;
+    cursor: pointer; 
+    border-radius: 3px;
+    float: right;} */
 
+#check + label{
+    cursor:pointer;
+}
 
+/* 클릭하기 전 */
+#check+ label:before{
+    content:"";
+    display:inline-block;
+    width:17px;
+    height:17px;
+    border:2px solid #F47C7C;
+    border-radius: 4px;
+    vertical-align:middle;
+}
 
+/* #check:checked + label:before{
+    content:"";
+    background-color:#F47C7C;
+    border-color:#F47C7C;
+    background:url(https://icon-icons.com/icons2/930/PNG/48/check_icon-icons.com_72363.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+} */
 
-
+/* input이 체크된 상태이면, 가상체크박스의 스타일을 변경하기 */
+input:checked + label::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: blue;
+}
