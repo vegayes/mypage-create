@@ -84,23 +84,72 @@ movieBtn.addEventListener("click" ,function(){
 
 
 
-// 4) 스크롤하기
-// var swiper = new Swiper('.favorite-list', {
-//   // direction: 'horizontal',
-//   autoplay: true,
-//   loop: true,
-//   spaceBetween: 30,
-//   slidesPerView: 3,
-//   navigation: {
-//     // prevEl: '.awards .swiper-prev',
-//     nextEl: '.next-btn-container'
-//   }
+
+// 4) 파일 열기
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   const fileTrigger = document.getElementById("file-trigger");
+//   const fileInput = document.getElementById("file-input");
+
+//   fileTrigger.addEventListener("click", function() {
+//       fileInput.click(); // 파일 업로드 input 열기
+//   });
 // });
 
 
 
+// 5) 체크박스 하나만 선택하게하기 ( 성별 )
+const divCheckboxes = document.querySelectorAll('.modify-gender');
 
-// 5) 
+// 클릭 이벤트를 처리하는 함수
+function handleCheckboxInteraction() {
+  const checkbox = this.querySelector('input[type="checkbox"]');
+  const label = this.querySelector('label');
 
+  // 모든 체크박스의 배경색과 레이블 색상을 초기화
+  divCheckboxes.forEach((otherDiv) => {
+    otherDiv.style.backgroundColor = '';
+    otherDiv.querySelector('label').style.color = ''; 
+  });
+
+  // 선택된 체크박스의 배경색과 레이블 색상을 변경
+  this.style.backgroundColor = 'blue';
+  label.style.color = 'white';
+  checkbox.checked = !checkbox.checked; // 체크박스 상태 변경
+}
+
+// 각 div 요소에 클릭 이벤트 리스너를 추가합니다.
+divCheckboxes.forEach((divCheckbox) => {
+  divCheckbox.addEventListener('click', handleCheckboxInteraction);
+});
+
+
+
+
+
+
+
+//6) 
+// Swiper 초기화 및 설정
+const swiper = new Swiper('.swiper-container', {
+  // 슬라이드 모드를 horizontal로 설정
+  direction: 'horizontal',
+
+  // 한 번에 보여지는 슬라이드 개수 (1로 설정하면 1개씩 슬라이딩)
+  slidesPerView: 1,
+
+  // 슬라이더의 루프를 설정
+  loop: true,
+
+  // 다음 버튼을 사용하여 다음 슬라이드로 이동
+  navigation: {
+    nextEl: '.next-btn',
+  },
+});
+
+// "next-btn" 클릭 시 다음 슬라이드로 이동
+document.querySelector('.next-btn').addEventListener('click', () => {
+  swiper.slideNext();
+});
 
 

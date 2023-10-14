@@ -10,6 +10,10 @@
         <!-- 아이콘 -->
         <script src="https://kit.fontawesome.com/ac58eafae7.js" crossorigin="anonymous"></script>
 
+         <!-- Swiper 라이브러리를 CDN을 통해 로드 -->
+         <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
+
+
     </head>
     <body>
         <!-- 수정해야 할 부분 ⓐ와 같이 표시함. -->
@@ -41,8 +45,13 @@
                 <section class = "user-function">
                     <!-- ④ a 태그로 만들기! -->
                     <a class = "user-login">
-                        <!-- <a>LOGIN</a> -->
-                        LOGIN
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        <span>LOGIN</span>
+                    </a>
+
+                    <a class = "user-logout" style="display: none;">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>LOGOUT</span>
                     </a>
 
                      <!-- ⑤ 버튼으로 만들어야 하나? -->
@@ -78,6 +87,8 @@
                     </div>
 
                     <div class = "favorite-setting" >
+
+
                         <a class = "movie-favorite-btn" id = "movie-favorite-btn">
                             <i class="fa-solid fa-star"></i>
                             영화 즐겨찾기
@@ -88,6 +99,9 @@
                             영화관 즐겨찾기
                         </a>
 
+
+
+
                         <a class = "edit-favorite-btn" id = "favorite-popup">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </a>
@@ -95,27 +109,29 @@
 
                     <div class = "favorite-list" id = "movie-favorite-container" >
 
-                        <div class = "favorite-list-wrapper ">
+                        <div class="swiper-container">
+                            <div class = "favorite-list-wrapper ">
+                                <img src = "ex-img/엘리멘탈.jpg">
+                            </div>
 
-                            <img src = "ex-img/엘리멘탈.jpg">
+                            <div class = "favorite-list-wrapper ">
+                                <img src = "ex-img/모아나.jpg">
+                            </div>
+
+                            <div class = "favorite-list-wrapper ">
+                                <img src = "ex-img/미니언즈.jpg">
+                            </div>
+
+                            <div class = "favorite-list-wrapper ">
+                                <img src = "ex-img/주토피아.jpg">
+                            </div>
                         </div>
 
-                        <div class = "favorite-list-wrapper ">
-                            <img src = "ex-img/모아나.jpg">
-                        </div>
-
-                        <div class = "favorite-list-wrapper ">
-                            <img src = "ex-img/미니언즈.jpg">
-                        </div>
-
-                        <div class = "favorite-list-wrapper ">
-                            <img src = "ex-img/주토피아.jpg">
-                        </div>
-
-                        <div class ="next-btn-container">
-                            <button type="button" class = "next-btn">
-                            </button>
-                        </div>
+                            <div class ="next-btn-container">
+                                <button type="button" class = "next-btn">
+                                </button>
+                            </div>
+                        
                     </div>
 
 
@@ -135,7 +151,7 @@
                         </div>
 
                         <div class = "favorite-list-cinema-wrapper">
-                            <img src = "ex-img/CGV 용상아이파크몰.png">
+                            <img src = "ex-img/CGV 용산아이파크몰.png">
                         </div>
 
                         <div class = "favorite-list-cinema-wrapper">
@@ -164,79 +180,136 @@
                     <div class = "visit-history-content-container" >
                         <!-- ① 스크롤 해서 가져오기! -->
                          <!-- ⑥ ②방문기록 없는 경우 jsp로 loop 값. -->
-                        <div class = "visit-history-content">
-                            <div class = "visit-history-list" id = "vh-list1">
-                                <div class = "history-img-container">
-                                    <img src = "ex-img/인사이드 아웃.jpg">
-                                </div>
-                                <!-- ③ 웹 캐시?????에??? 저장된 값 -->
-                                <div class = "history-content-container">
-                                    <h1> 인사이드 아웃</h1>
-                                    <!-- ④ 줄거리 더 많이 쓰이게되면, ....으로 표시-->
-                                    <p>그러나 부모님과 함께 샌프란시스코로 이사하면서 그녀의 삶은 완전히 뒤바뀐다. 기쁨은 이런 큰 변화 속에서 라일리의 감정을 잘 다스리려고 노력한다. 그러나, 이사로 인한 스트레스로 슬픔이 나타나고 만다. 라일리의 기분을 위해 고군분투하던 기쁨과 슬픔은 먼 곳에 떨어져 버리고 결국 라일리의 감정 컨트롤 본부에는 악감정만이 남게 된다.</p>
-                                </div>
-                                <!-- ⑤  삭제 버튼 -> 팝업으로 연결시키기. (근데 팝업하려면 button으로 해야하나?) -->
-                                <div class = "history-del-btn">
-                                    <button>
-                                        삭제
-                                    </button>
-                                </div>
-                            </div>
 
-                            <div class = "visit-history-list" id = "vh-list2">
-                                <div class = "history-img-container">
-                                    <img src = "ex-img/미니언즈.jpg">
-                                </div>
-                                <div class = "history-content-container">
-                                    <h1> 미니언즈</h1>
-                                    <!-- ④ 줄거리 더 많이 쓰이게되면, ....으로 표시-->
-                                    <p>각자 색다른 매력을 지닌 미니언 케빈, 스튜어트와 밥은 갑작스럽게 새로운 보스를 찾아야 하는 상황에 처 하니 그들은 함께 슈퍼배드 원정대를 결성 한다. 그리고 머지 않아 여성 슈퍼 악당 스칼렛을 만나 그녀의 미션을 수행하고자 나선다.</p>
-                                </div>
-                                <!-- ⑤  삭제 버튼 -> 팝업으로 연결시키기. (근데 팝업하려면 button으로 해야하나?) -->
-                                <div class = "history-del-btn">
-                                    <button>
-                                        삭제
-                                    </button>
-                                </div>     
-                            </div>
+                         <div class = "visit-history-content">
+                            <table>     
 
-                            <div class = "visit-history-list" id = "vh-list3">
-                                <div class = "history-img-container">
-                                    <img src = "ex-img/주토피아.jpg">
-                                </div>
-                                <div class = "history-content-container">
-                                    <h1> 주토피아</h1>
-                                    <!-- ④ 줄거리 더 많이 쓰이게되면, ....으로 표시-->
-                                    <p>토끼 종족 최초로 경찰이 된 열정 넘치는 주디는 덩치가 큰 육식 동물들 사이에서 경찰로 활약하기 위해 애쓴다. 그러던 어느 날, 주토피아에 의문의 연쇄 실종 사건이 발생하고 능글맞은 사기꾼 여우 닉과 함께 48시간 안에 사건을 해결하기 위해 이곳저곳을 돌아다니며 고군분투한다.</p>
-                                </div>
-                                <!-- ⑤  삭제 버튼 -> 팝업으로 연결시키기. (근데 팝업하려면 button으로 해야하나?) -->
-                                <div class = "history-del-btn">
-                                    <button>
-                                        삭제
-                                    </button>
-                                </div>                                
-                            </div>
+                                <tr class = "visit-history-list">
+                                    <td class = "history-img-container">
+                                        <img src = "ex-img/인사이드 아웃.jpg">
+                                    </td>
+                                    <td class = "history-content-container">
+                                        <h1> 인사이드 아웃</h1>
+                                        <!-- ④ 줄거리 더 많이 쓰이게되면, ....으로 표시-->
+                                        <p>그러나 부모님과 함께 샌프란시스코로 이사하면서 그녀의 삶은 완전히 뒤바뀐다. 기쁨은 이런 큰 변화 속에서 라일리의 감정을 잘 다스리려고 노력한다. 그러나, 이사로 인한 스트레스로 슬픔이 나타나고 만다. 라일리의 기분을 위해 고군분투하던 기쁨과 슬픔은 먼 곳에 떨어져 버리고 결국 라일리의 감정 컨트롤 본부에는 악감정만이 남게 된다.</p>
+                                    </td>
+                                    <td class = "history-del-btn">
+                                        <div>
+                                            삭제
+                                        </div>
+                                    </td>
+                                </tr>
 
-                            
-                            <div class = "visit-history-list" id = "vh-list4">
-                                <div class = "history-img-container">
-                                    <img src = "ex-img/엘리멘탈.jpg">
-                                </div>
-                                <div class = "history-content-container">
-                                    <h1> 엘리멘탈</h1>
-                                    <!-- ④ 줄거리 더 많이 쓰이게되면, ....으로 표시-->
-                                    <p>각양각색의 원소들이 살아가는 엘리멘트 시티, 지하철에서 우연히 마주친 앰버와 웨이드는 정반대 종족인 서로에게 끌린다.</p>
-                                </div>
-                                 <!-- ⑤  삭제 버튼 -> 팝업으로 연결시키기. (근데 팝업하려면 button으로 해야하나?) -->
-                                 <div class = "history-del-btn">
-                                    <button>
-                                        삭제
-                                    </button>
-                                </div>     
-                      
-                            </div>
 
-                            <!-- 스크롤이면 버튼 따로 필요하지 않을듯 -->
+                                <tr class = "visit-history-list">
+                                    <td class = "history-img-container">
+                                        <img src = "ex-img/미니언즈.jpg">
+                                    </td>
+                                    <td class = "history-content-container">
+                                        <h1> 미니언즈</h1>
+                                        <!-- ④ 줄거리 더 많이 쓰이게되면, ....으로 표시-->
+                                        <p>각자 색다른 매력을 지닌 미니언 케빈, 스튜어트와 밥은 갑작스럽게 새로운 보스를 찾아야 하는 상황에 처 하니 그들은 함께 슈퍼배드 원정대를 결성 한다. 그리고 머지 않아 여성 슈퍼 악당 스칼렛을 만나 그녀의 미션을 수행하고자 나선다.</p>
+                                    </td>
+                                    <td class = "history-del-btn">
+                                        <div>
+                                            삭제
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                                <tr class = "visit-history-list">
+                                    <td class = "history-img-container">
+                                        <img src = "ex-img/주토피아.jpg">
+                                    </td>
+                                    <td class = "history-content-container">
+                                        <h1> 주토피아</h1>
+                                        <!-- ④ 줄거리 더 많이 쓰이게되면, ....으로 표시-->
+                                        <p>토끼 종족 최초로 경찰이 된 열정 넘치는 주디는 덩치가 큰 육식 동물들 사이에서 경찰로 활약하기 위해 애쓴다. 그러던 어느 날, 주토피아에 의문의 연쇄 실종 사건이 발생하고 능글맞은 사기꾼 여우 닉과 함께 48시간 안에 사건을 해결하기 위해 이곳저곳을 돌아다니며 고군분투한다.</p>
+                                    </td>
+                                    <td class = "history-del-btn">
+                                        <div>
+                                            삭제
+                                        </div>
+                                    </td>
+                                </tr>
+    
+
+                                <tr class = "visit-history-list">
+                                    <td class = "history-img-container">
+                                        <img src = "ex-img/엘리멘탈.jpg">
+                                    </td>
+                                    <td class = "history-content-container">
+                                        <h1> 엘리멘탈</h1>
+                                        <!-- ④ 줄거리 더 많이 쓰이게되면, ....으로 표시-->
+                                        <p>각양각색의 원소들이 살아가는 엘리멘트 시티, 지하철에서 우연히 마주친 앰버와 웨이드는 정반대 종족인 서로에게 끌린다.</p>
+                                     </td>
+                                    <td class = "history-del-btn">
+                                        <div>
+                                            삭제
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                                <tr class = "visit-history-list">
+                                    <td class = "history-img-container">
+                                        <img src = "ex-img/미니언즈.jpg">
+                                    </td>
+                                    <td class = "history-content-container">
+                                        <h1> 미니언즈</h1>
+                                        <!-- ④ 줄거리 더 많이 쓰이게되면, ....으로 표시-->
+                                        <p>각자 색다른 매력을 지닌 미니언 케빈, 스튜어트와 밥은 갑작스럽게 새로운 보스를 찾아야 하는 상황에 처 하니 그들은 함께 슈퍼배드 원정대를 결성 한다. 그리고 머지 않아 여성 슈퍼 악당 스칼렛을 만나 그녀의 미션을 수행하고자 나선다.</p>
+                                    </td>
+                                    <td class = "history-del-btn">
+                                        <div>
+                                            삭제
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                                <tr class = "visit-history-list">
+                                    <td class = "history-img-container">
+                                        <img src = "ex-img/주토피아.jpg">
+                                    </td>
+                                    <td class = "history-content-container">
+                                        <h1> 주토피아</h1>
+                                        <!-- ④ 줄거리 더 많이 쓰이게되면, ....으로 표시-->
+                                        <p>토끼 종족 최초로 경찰이 된 열정 넘치는 주디는 덩치가 큰 육식 동물들 사이에서 경찰로 활약하기 위해 애쓴다. 그러던 어느 날, 주토피아에 의문의 연쇄 실종 사건이 발생하고 능글맞은 사기꾼 여우 닉과 함께 48시간 안에 사건을 해결하기 위해 이곳저곳을 돌아다니며 고군분투한다.</p>
+                                    </td>
+                                    <td class = "history-del-btn">
+                                        <div>
+                                            삭제
+                                        </div>
+                                    </td>
+                                </tr>
+    
+
+                                <tr class = "visit-history-list">
+                                    <td class = "history-img-container">
+                                        <img src = "ex-img/엘리멘탈.jpg">
+                                    </td>
+                                    <td class = "history-content-container">
+                                        <h1> 엘리멘탈</h1>
+                                        <!-- ④ 줄거리 더 많이 쓰이게되면, ....으로 표시-->
+                                        <p>각양각색의 원소들이 살아가는 엘리멘트 시티, 지하철에서 우연히 마주친 앰버와 웨이드는 정반대 종족인 서로에게 끌린다.</p>
+                                     </td>
+                                    <td class = "history-del-btn">
+                                        <div>
+                                            삭제
+                                        </div>
+                                    </td>
+                                </tr>
+                               
+
+
+                               
+                            </table>
+                        </div>
+
+
+
                         </div>
                     </div>
                 </section>
@@ -542,8 +615,10 @@
 
                     <div class = "modify-member-info-container">
                         
-                        <div class = "modify-member-info-content">
 
+                        <form action ="#" name ="info-update" class = "modify-member-info-content">
+                            <!--  name 아직 안넣음 -->
+                            
                             <!-- 프로필 -->
                             <div class = "member-info-profile-container">
 
@@ -551,14 +626,15 @@
                                     <img src="ex-img/주토피아2.jpg">
                                 </div>
 
-                                <!-- ① 프로필 사진 변경하는 버튼 -->
-                                <div class = "member-profile-modify-btn">
-                                    <!-- <input type="file"> -->
+                                <input type="file" id="file-input" />
+                                <label for="file-input" class="member-profile-modify-btn">
                                     <i class="fa-solid fa-camera-retro"></i>
-                                    프로필 사진 변경
-                                </div>
-                                
+                                    <span>프로필 사진 변경</span>
+                                </label>
+                                  
                             </div>
+
+
 
                             <!-- 변경 -->
                             <div class = "member-info-container">
@@ -609,7 +685,7 @@
                                         <div class = "modify-content-input">
                                             <i class="fa-regular fa-circle-user"></i>
 
-                                            <input type="password" placeholder="NickName">
+                                            <input type="text" placeholder="NickName">
                                         </div>
                                     </div>
 
@@ -626,13 +702,17 @@
 
                                     <div class = "modify-content">
                                         <div class = "modify-content-btn">
-                                            <!-- ③ 체크 박스여야하나? -->
-                                            <!-- ④ 설정된 값에 따라 css 적용 다름 -->
-                                            <div class = "modify-gender" id="man">
-                                                남자
+                                            <div class = "modify-gender" id="man" >
+                                                <label>
+                                                    <input type="checkbox"  name='gender' value='M'>
+                                                    남자
+                                                </label>
                                             </div>
                                             <div class = "modify-gender" id = "woman">
-                                                여자
+                                                <label>
+                                                    <input type="checkbox"   name='gender' value='F'>
+                                                    여자
+                                                </label>
                                             </div>
 
                                         </div>
@@ -641,10 +721,6 @@
                                     <div class = "validation-content">
                                     </div>
                                 </div>
-                                
-                            
-
-
                             </div>
 
                             <!-- 버튼 -->
@@ -657,8 +733,11 @@
                                     회원탈퇴
                                 </a>
                             </div>
+                            
 
-                        </div>
+
+                        </form>
+
                     </div>
                 </section>
 
@@ -668,6 +747,9 @@
         <footer>
             <img src="ex-img/footer-img.png">
         </footer>
+
+        <!-- Swiper 스크립트 추가 -->
+        <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 
         <script src = "my-page.js"></script>
     </body>
