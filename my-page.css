@@ -321,17 +321,12 @@ aside > a{
     height:350px;
 } */
 
-<<<<<<< HEAD
-/* .swiper-wrapper{
-    /* flex-basis: 95%;*/
-=======
 .swiper-container{
     flex-basis: 95%;
 
     display: flex;
 }
 
->>>>>>> 4248f535d469bda4a1c2983b8642d16218a9610e
 
     /* display: flex;  */
 
@@ -387,11 +382,7 @@ aside > a{
     flex-basis: 5%;
 }
 
-<<<<<<< HEAD
-/* .next-btn{
-=======
 .next-btn{
->>>>>>> 4248f535d469bda4a1c2983b8642d16218a9610e
     width: 30px;
     height: 20px;
 
@@ -426,6 +417,25 @@ aside > a{
     justify-content: center;
     align-items: center;
 
+}
+
+
+.visit-history-title,
+.comment-list-title{
+    font-size: 30px;
+    flex-basis: 10%;
+    width: 1100px;
+
+    color: black;
+    background-color: white;
+
+    font-size: 30px;
+    font-weight: bold;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 #mypage-visit-history,
