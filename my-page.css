@@ -321,8 +321,17 @@ aside > a{
     height:350px;
 } */
 
+<<<<<<< HEAD
 /* .swiper-wrapper{
     /* flex-basis: 95%;*/
+=======
+.swiper-container{
+    flex-basis: 95%;
+
+    display: flex;
+}
+
+>>>>>>> 4248f535d469bda4a1c2983b8642d16218a9610e
 
     /* display: flex;  */
 
@@ -378,7 +387,11 @@ aside > a{
     flex-basis: 5%;
 }
 
+<<<<<<< HEAD
 /* .next-btn{
+=======
+.next-btn{
+>>>>>>> 4248f535d469bda4a1c2983b8642d16218a9610e
     width: 30px;
     height: 20px;
 
