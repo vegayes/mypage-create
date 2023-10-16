@@ -40,7 +40,7 @@ main{
 /* nav */
 nav{
     flex-basis: 100%;
-    height: 78px;
+    height: 88px;
 
     display: flex;
 
@@ -67,7 +67,7 @@ nav section:not(:nth-child(2)){
 /* nav- 검색창 */
 nav section:nth-child(2){
     flex-basis: 60%;
-
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,10 +79,10 @@ nav section:nth-child(2){
 } */
 
 .movie-search-area fieldset{
-    width: 1000px;
+    width: 900px;
     border: 2px solid black;
 
-    height: 45px;
+    height: 40px; /*원래 45px*/
     /*border-radius: 5px; */
     margin: 0;
     margin-bottom: 5px;
@@ -92,7 +92,9 @@ nav section:nth-child(2){
 
 #query{
     flex-basis: 92%;
-    padding: 5px;
+    /* padding: 5px; */
+    padding: 7px;
+    font-size: 18px;
     font-size: 20px;
     font-weight: bold;
     border: none;
@@ -103,8 +105,9 @@ nav section:nth-child(2){
 
 #search-btn{
     flex-basis: 8%;
+    /* line-height: 30px; */
     line-height: 35px;
-    font-size: 1.2em;
+    font-size: 1.1em;
     border-radius: 0px 5px 5px 0px   ;
     border: none;
     background-color: white; /* transparent : 투명 */
@@ -126,19 +129,28 @@ nav section:nth-child(2){
     justify-content: center;
 } */
 
-.user-login {
+.user-login,
+.user-logout {
     width: 170px;
     height: 55px;
     border-radius: 50px;
     text-align: center;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
+    align-items: center;
 
     background-color: white;
     color:black;
-    font-size: 30px;
+    font-size: 26px;
 }
+
+.user-login > span,
+.user-logout> span{
+    flex-basis: 60%;
+    padding-left: 10px;
+}
+
 
 .user-mypage{
     flex-basis: 50%;
@@ -196,6 +208,8 @@ aside > a{
   }
 
 .mypage{
+
+    /* nav바에 맞게 높이 조절! */
     height: 850px;
 
     display: flex;
@@ -208,7 +222,7 @@ aside > a{
 
 .mypage-info{
 
-    height: 1220px;
+    height: 1000px;
     display: flex;
     /* flex-wrap: wrap; */
     flex-direction: column;
@@ -289,18 +303,42 @@ aside > a{
 }
 
 
-.favorite-list{
-    flex-basis: 57%;
+/*.favorite-list, */.swiper{
+    /* flex-basis: 57%; */
+    width:1300px;
+    height:300px;
 
-    display: flex;
-    align-items: center;
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 
     /* border: 2px solid yellow; */
 }
+/* 
+.swiper{
+    width:1200px;
+    height:350px;
+} */
 
+/* .swiper-wrapper{
+    /* flex-basis: 95%;*/
 
-.favorite-list-wrapper{
-    flex-basis: 25%;
+    /* display: flex;  */
+
+.swiper-slide{
+    flex-basis:25%;
+    /* width:300px; */
+    padding:20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid white; */
+}
+
+.favorite-list-wrapper {
+    /* flex-basis: 80%; */
 
     width: 250px;
     height: 250px;
@@ -312,8 +350,7 @@ aside > a{
 }
 
 .favorite-list-cinema-wrapper{
-    flex-basis: 25%;
-
+    /* flex-basis: 80%; */
     width: 315px;
     height: 250px;
     border-radius: 50px;
@@ -341,8 +378,7 @@ aside > a{
     flex-basis: 5%;
 }
 
-.next-btn{
-
+/* .next-btn{
     width: 30px;
     height: 20px;
 
@@ -354,7 +390,10 @@ aside > a{
     border-right: 40px solid transparent;
 
     background-color: transparent;
-}
+} */
+
+
+
 
 /* ======================================================================= */
 
@@ -394,11 +433,11 @@ aside > a{
     align-items: center;
 
     
-    overflow: auto;
+    /* overflow: auto; */
 }
 
 .visit-history-content{
-    flex-basis: 100%;
+    /* flex-basis: 100%; */
 
     width: 1100px;
     height: 600px;
@@ -407,9 +446,26 @@ aside > a{
 
     /* 목록 정렬! */
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+
+
+    overflow: scroll;
+    overflow-x: hidden;
 }
+
+.visit-history-content::-webkit-scrollbar{
+    width: 15px;
+}
+
+.visit-history-content::-webkit-scrollbar{
+    background: #101322;
+}
+
+.visit-history-content::-webkit-scrollbar-thumb{
+    height: 15%;
+    background-color:#070583;
+    border-radius: 10px;
+}
+
 
 
 .visit-history-list{
@@ -418,6 +474,8 @@ aside > a{
 
     padding : 0px 50px;
     display: flex;
+    align-items: center;
+
 }
 
 .history-img-container{
@@ -692,22 +750,20 @@ aside > a{
 }
 
 
-.modify-member-info-container{
-    flex-basis: 90%;
-    /* border: 2px solid wheat; */
-}
+
 
 
 .modify-member-info-content{
     flex-basis: 100%;
     width: 1159px;
-    height: 1500px;
+    /* height: 1500px; */
     border-radius: 50px;
     background: linear-gradient(180deg, #000 0%, rgba(158, 185, 255, 0.68) 45.83%, rgba(255, 255, 255, 0.00) 99.99%, rgba(255, 255, 255, 0.00) 100%);
     /* 목록 정렬! */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+
 }
 
 /* 프로필 */
@@ -722,8 +778,8 @@ aside > a{
 }
 
 .member-profile-wrapper{
-    width: 280px;
-    height: 280px;
+    width: 270px;
+    height: 270px;
     /* border: 3px solid #FFF; */
     border-radius: 50%;
 
@@ -731,6 +787,7 @@ aside > a{
 
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 } 
 
 .member-profile-wrapper>img{
@@ -740,8 +797,8 @@ aside > a{
 .member-profile-modify-btn{
     background-color: #DCEFF3;;
     border-radius: 10px;
-    width: 441px;
-    height: 50px;
+    width: 400px;
+    height: 40px;
 
     color: #8B8B8B;
 
@@ -749,21 +806,33 @@ aside > a{
     justify-content: center;
     align-items: center;
 
-    font-size: 20px
+    font-size: 20px;
+    cursor: pointer; 
+    
+    transition: background-color 0.3s ease, color 0.3s ease;
+
 }
 
-.member-profile-modify-btn > *{
-    margin: 0px 10px;
+.fa-solid{
+    margin-right: 4px;
+}
+
+input[type="file"] {
+    display: none;  
+    cursor: pointer;
 }
 
 
-
+.member-profile-modify-btn:hover{
+    background-color: #7A80FF;
+    color: white;
+}
 
 
 
 /*변경 내용*/
 .member-info-container{
-    flex-basis: 52%;
+    flex-basis: 50%;
 
     display: flex;
     flex-direction: column;
@@ -771,19 +840,19 @@ aside > a{
 }
 
 .modify-content-container{
-    flex-basis: 25%;
+    flex-basis: 23%;
     display: flex;
     justify-content: center;
 }
 
 .modify-title{
-    flex-basis: 25%;
+    flex-basis: 30%;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -799,7 +868,7 @@ aside > a{
 
     font-size: 30px;
     width: 526px;
-    height: 70px;   
+    height: 50px;   
     background: #D9D9D9;
     border-radius: 10px;
 
@@ -807,26 +876,28 @@ aside > a{
     justify-content: start;
     align-items: center;
 
-    padding: 10px;
+    padding: 5px;
     
 }
 
 .modify-content-input >i{
     flex-basis: 15%;
     color: black;
-    font-size:40px;
+    font-size:30px;
     text-align: center;
 }
 
 .modify-content-input >input{
     flex-basis: 50%;
     color: #8B8B8B;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
     border: none;
     outline : none;
     background-color: transparent;
     padding: 15px;
+
+    font-size: 25px;
 }
 
 .validation-content{
@@ -849,12 +920,12 @@ aside > a{
     flex-basis: 50%;
 
     width: 148px;
-    height: 71px;
+    height: 51px;
 
     border-radius: 20px;
     background: #F1F1F1;
     color: black;
-    font-size: 36px;
+    font-size: 30px;
 
     margin : 0px 30px 0px 0px;
 
@@ -863,20 +934,32 @@ aside > a{
     align-items: center;
 
     font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.modify-gender:hover{
+    background-color: rgb(3, 198, 233);
+    color: white;
+
 }
 
 
 
 /* 변경 내용 */
-.member-info-option-container{
-    flex-basis: 13%;
-} 
 
 .member-info-option-container{
+    flex-basis: 5%;
+
     display: flex;
 
     justify-content: center;
     align-items: center;
+
+    /* border: 2px solid rebeccapurple; */
 }
 
 .member-info-option-btn{
@@ -886,13 +969,16 @@ aside > a{
 
     margin: 0px 50px 0px 0px;
 
-    width: 416px;
-    height: 90px;
+    width: 350px;
+    height: 50px;
+
+    border-radius: 5px;
 
     background: rgba(255, 255, 255, 0.50);
     font-size: 30px;
     font-weight: bold;
 }
+
 
 
 .red{
@@ -921,9 +1007,9 @@ input[type="checkbox"] {display: none;}
     border-radius: 3px;
     float: right;} */
 
-#check + label{
+/* #check + label{
     cursor:pointer;
-}
+} */
 
 /* 클릭하기 전 */
 #check+ label:before{
@@ -936,19 +1022,51 @@ input[type="checkbox"] {display: none;}
     vertical-align:middle;
 }
 
-/* #check:checked + label:before{
+#check:checked + label:before{
     content:"";
     background-color:#F47C7C;
     border-color:#F47C7C;
-    background:url(https://icon-icons.com/icons2/930/PNG/48/check_icon-icons.com_72363.png);
-    background-repeat: no-repeat;
-    background-position: 50%;
-} */
+    /* background:url(https://icon-icons.com/icons2/930/PNG/48/check_icon-icons.com_72363.png); */
+    /* background-repeat: no-repeat;
+    background-position: 50%; */
+}
 
 /* input이 체크된 상태이면, 가상체크박스의 스타일을 변경하기 */
-input:checked + label::before {
+/* input:checked + label::before {
   content: "";
   width: 16px;
   height: 16px;
   background-color: blue;
+} */
+
+/* 모달 스타일 */
+.modal {
+    display: none;
+    position: fixed; /* 고정 위치 */
+    top: 50%; /* 화면 상단에서 중앙으로 이동 */
+    left: 50%; /* 화면 왼쪽에서 중앙으로 이동 */
+    transform: translate(-50%, -50%); /* 가운데로 이동 */
+    z-index: 1;
+    /* width: 80%; 모달의 너비 */
+    max-width: 1000px; /* 최대 너비 설정 */
+    height: 400px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #888;
+}
+
+/* 모달 내부 스타일 */
+.modal-content {
+    margin: 0;
+    padding: 0;
+}
+
+/* 닫기 버튼 스타일 */
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
 }

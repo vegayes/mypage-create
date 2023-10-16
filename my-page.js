@@ -6,6 +6,32 @@ document.getElementById("favorite-popup").addEventListener("click",function(){
 });
 
 
+// document.getElementById("favorite-popup").onclick = function() {
+//   // AJAX 요청을 사용하여 외부 HTML 파일의 내용을 가져옴
+//   var xhr = new XMLHttpRequest();
+//   xhr.open("GET", "my-page-popup-favorite.html", true);
+//   xhr.onreadystatechange = function() {
+//       if (xhr.readyState === 4 && xhr.status === 200) {
+//           // 가져온 HTML 내용을 모달 내부에 삽입
+//           document.getElementById("modalContent").innerHTML = xhr.responseText;
+//           // 모달 열기
+//           document.getElementById("myModal").style.display = "block";
+//       }
+//   };
+//   xhr.send();
+// };
+
+// document.getElementById("closeModalButton").onclick = function() {
+//   document.getElementById("myModal").style.display = "none";
+// };
+
+// window.onclick = function(event) {
+//   if (event.target === document.getElementById("myModal")) {
+//       document.getElementById("myModal").style.display = "none";
+//   }
+// };
+
+
 // 2) 체크박스 확인
 function checkAllList(e) {
 
@@ -84,23 +110,58 @@ movieBtn.addEventListener("click" ,function(){
 
 
 
-// 4) 스크롤하기
-// var swiper = new Swiper('.favorite-list', {
-//   // direction: 'horizontal',
-//   autoplay: true,
-//   loop: true,
-//   spaceBetween: 30,
-//   slidesPerView: 3,
-//   navigation: {
-//     // prevEl: '.awards .swiper-prev',
-//     nextEl: '.next-btn-container'
-//   }
-// });
+
+// 4) 슬라이더
+const swiper = new Swiper('.swiper', {
+
+  // If we need pagination
+  // pagination: {
+  //   el: '.swiper-pagination',
+  // },
+
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+
+  // spaceBetween: 10
+});
 
 
 
+// 5) 체크박스 하나만 선택하게하기 ( 성별 )
+const divCheckboxes = document.querySelectorAll('.modify-gender');
 
-// 5) 
+// 클릭 이벤트를 처리하는 함수
+function handleCheckboxInteraction() {
+  const checkbox = this.querySelector('input[type="checkbox"]');
+  const label = this.querySelector('label');
+
+  // 모든 체크박스의 배경색과 레이블 색상을 초기화
+  divCheckboxes.forEach((otherDiv) => {
+    otherDiv.style.backgroundColor = '';
+    otherDiv.querySelector('label').style.color = ''; 
+  });
+
+  // 선택된 체크박스의 배경색과 레이블 색상을 변경
+  this.style.backgroundColor = 'blue';
+  label.style.color = 'white';
+  checkbox.checked = !checkbox.checked; // 체크박스 상태 변경
+}
+
+// 각 div 요소에 클릭 이벤트 리스너를 추가합니다.
+divCheckboxes.forEach((divCheckbox) => {
+  divCheckbox.addEventListener('click', handleCheckboxInteraction);
+});
+
+
 
 
 
