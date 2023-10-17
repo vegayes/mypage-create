@@ -625,19 +625,21 @@ aside > a{
     height: 40px;
     border-radius: 10px;
     font-size: 10px;
-    background-color: wheat;
-    color: black;
-    font-weight: bold;
+    background-color: rgb(241, 239, 106);
     margin:auto;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    cursor: pointer;
 }
 
-.history-del-btn > button{
+.history-del-btn > div{
     background-color: transparent;
     border: none;
     font-weight: bold;
+    color: black;
+
 }
 
 
