@@ -882,7 +882,7 @@ aside > a{
 .member-profile-wrapper{
     width: 270px;
     height: 270px;
-    /* border: 3px solid #FFF; */
+    border: 3px solid #FFF;
     border-radius: 50%;
 
     overflow: hidden;
@@ -915,7 +915,7 @@ aside > a{
 
 }
 
-.fa-solid{
+.fa-camera-retro{
     margin-right: 4px;
 }
 
@@ -1100,7 +1100,7 @@ footer>img{
 /* 체크박스 디자인 */
 
 /* 기존 체크박스 해제 */
-input[type="checkbox"] {display: none;}
+/* input[type="checkbox"] {display: none;} */
 
 /* 체크박스 labe 값 이용 */
 /* input[type="checkbox"] + label {
@@ -1114,7 +1114,7 @@ input[type="checkbox"] {display: none;}
 } */
 
 /* 클릭하기 전 */
-#check+ label:before{
+/* #check+ label:before{
     content:"";
     display:inline-block;
     width:17px;
@@ -1122,7 +1122,7 @@ input[type="checkbox"] {display: none;}
     border:2px solid #F47C7C;
     border-radius: 4px;
     vertical-align:middle;
-}
+} */
 
 #check:checked + label:before{
     content:"";
@@ -1171,4 +1171,9 @@ input[type="checkbox"] {display: none;}
     color: #333;
     font-size: 20px;
     cursor: pointer;
+}
+
+
+.modify-gender > label >input{
+    display: none;
 }
