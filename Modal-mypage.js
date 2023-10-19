@@ -6,42 +6,27 @@
 // });
 
 // const favoriteOpen = document.getElementById("favorite-popup-open");
+const commnetOpen = document.getElementById("favorite-popup-open");
 // const commentOpen = document.querySelectorAll(".comment-list-edit");
-// const favoriteModal = document.querySelector("#favorite-list-modal-box");
-// const Modal = document.querySelectorAll(".modal");
-
-// const commnetOpen = document.getElementById("favorite-popup-open");
 const close = document.querySelector("#close");
-// const commentModal = document.querySelector("#favorite-list-modal-box");
+// const favoriteModal = document.querySelector("#favorite-list-modal-box");
+const commentModal = document.querySelector("#favorite-list-modal-box");
+// const Modal = document.querySelectorAll(".modal");
+// 
 
+function openModal() {
+  commentModal.classList.add("active");
+}
 
+function closeModal() {
+  commentModal.classList.remove("active");
+}
 
-// function openModal() {
-//   commentModal.classList.add("active");
-// }
+commnetOpen.addEventListener("click", openModal);
 
-// function closeModal() {
-//   commentModal.classList.remove("active");
-// }
+commentModal.addEventListener("click", closeModal);
 
-// commnetOpen.addEventListener("click", openModal);
-
-// commentModal.addEventListener("click", closeModal);
-
-// close.addEventListener("click", closeModal);
-
-
-const commnetOpen = document.getElementById("comment-list-edit");
-
-
-
-
-
-
-
-
-
-
+close.addEventListener("click", closeModal);
 
 
 

@@ -300,6 +300,8 @@ aside > a{
     font-size: 28px;
     font-weight: bold;
     padding: 10px 20px;
+
+    cursor: pointer;
 }
 
 
@@ -1141,219 +1143,73 @@ footer>img{
   background-color: blue;
 } */
 
-/* 모달 스타일 */
-.modal {
-    display: none;
-    position: fixed; /* 고정 위치 */
-    top: 50%; /* 화면 상단에서 중앙으로 이동 */
-    left: 50%; /* 화면 왼쪽에서 중앙으로 이동 */
-    transform: translate(-50%, -50%); /* 가운데로 이동 */
-    z-index: 1;
-    /* width: 80%; 모달의 너비 */
-    max-width: 1000px; /* 최대 너비 설정 */
-    height: 400px;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border: 1px solid #888;
-}
-
-/* 모달 내부 스타일 */
-.modal-content {
-    margin: 0;
-    padding: 0;
-}
-
-/* 닫기 버튼 스타일 */
-.close {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    color: #333;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-
-.modify-gender > label >input{
-    display: none;
-}
-
-
+/* 모달 스타일 제거함.*/
 
 /* ====== 모달 다시 만들기 (favorite) =====*/
-/* button{
-    background-color: blue;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 15px;
+
+#fv-modal-btn{
     display: none;
 }
+
 
 #favorite-list-modal-box{
     position: fixed;
-    top: 0;
-    left: 0;
-    bottom : 0;
-    right: 0;
-
-    background-color: transparent;
-
-    display: none;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 100; 
+    /* display: none; */
+    /* display: flex;
     justify-content: center;
-    align-items: center;
-    z-index: 3;
+    align-items: center; */
 }
-
-#favorite-list-modal-box.active{
-    display: flex;
-}
-
 
 #favorite-list-modal-content{
-    background-color: black;
-    width: 40%;
-    padding: 20px ;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    /* width: 40%;
+    height: 50%; */
+    width: 900px;
+    height: 570px;
+    background-color: #fff;
     border-radius: 5px;
-    position: relative;
+    z-index:2; /*102*/
 
+    /* overflow: scroll; */
+/* 
     display: flex;
-    flex-direction: column;
+    flex-direction: column; */
 }
 
-#close{
+ #fv-modal-close{
+    position:absolute;
+    top:0%;
+    right:0%;
+    transform : translate(40%, -40%);
+    padding: 10px;
+    background-color: #dd5347;
+    border-radius: 10px;
+    z-index:1;
 
-    color: white;
-
-    display: flex;
-    justify-content: end;
-    padding-right: 20px;
-
-    font-size: 25px;
-    cursor: pointer;
-} */
-
-/* ----- 모달 댓글 ----- */
-
-#comment-update-modal-box{
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom : 0;
-    right: 0;
-
-    background-color: transparent;
-
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 3;
-}
-
-#comment-update-modal-box.active{
-    display: flex;
-}
-
-
-#comment-update-modal-content{
-    background-color: black;
-    width: 40%;
-    padding: 20px ;
-    border-radius: 5px;
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-}
-
-#close{
-    color: white;
-
-    display: flex;
-    justify-content: end;
-    padding-right: 20px;
-
-    font-size: 25px;
-    cursor: pointer;
 } 
 
-
-.title-container{
-    flex-basis: 10%;
-    
-    font-size: 30px;
-    font-weight: bold;
-
-    display: flex;
-    justify-content: center;
+#favorite-list-modal-content > p{
+    font-size: 50px;
 }
 
-.update-container{
-    flex-basis: 70%;
-
-    display: flex;
-    justify-content: center;
-
-    padding: 20px;
+#fv-modal-back{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,1);
+    /* z-index: 1; */
 }
 
-
-
-
-table td{
-    /* border: 2px solid yellow; */
-    padding: 20px;
-
-    font-size: 20px;
+#fv-modal-btn:checked + #favorite-list-modal-box{
+    display: block;
 }
-
-input {
-    width:300px;
-    height:30px;
-    font-size:20px;
-}
-
-input:last-child{
-    font-size: 15px;
-}
-
-select{
-    width:180px;
-    /* height:30px; */
-    font-size:15px;
-}
-
-
-
-.update-btn-container{
-
-    flex-basis: 10%;
-
-    display: flex;
-
-    padding-bottom: 20px;
-
-    justify-content: center;
-    /* align-items: center; */
-
-}
-
-.btn{
-    width: 200px;
-    height: 40px;
-
-    background-color: aliceblue;
-    color: black;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    font-weight: bold;
-    margin-left: 50px;
-}
-
-.btn:nth-child(2){
-    background-color: red;
-}
-

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Semi-MyPage</title>
 
-        <link rel="stylesheet" href ="my-page.css">
+        <link rel="stylesheet" href ="Modal-comment.css">
 
         <!-- 아이콘 -->
         <script src="https://kit.fontawesome.com/ac58eafae7.js" crossorigin="anonymous"></script>
@@ -107,11 +107,33 @@
 
 
 
-                        <a class = "edit-favorite-btn" id = "favorite-popup-open">
+                        <!-- <a class = "edit-favorite-btn" id = "favorite-popup-open">
                             <i class="fa-solid fa-pen-to-square"></i>
-                        </a>
+                        </a> -->
 
-                        
+                        <div class = "edit-favorite-btn"  for="fv-modal-btn">
+                            <input type="checkbox" id = "fv-modal-btn">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </div>
+
+                        <!--  =====================================================================================================================================        -->
+                        <!--                                                   즐겨찾기 리스트                                                                              -->
+                        <div id = "favorite-list-modal-box">
+                            <div id = "favorite-list-modal-content">
+                                <label id = "fv-modal-close" for = "fv-modal-btn">&times;</label>
+                                
+                                <div>
+                                    <p>안</p>
+                                    <p>안</p>
+                                    <p>안</p>
+                                    <p>안</p>
+                                </div>
+
+
+                            </div>
+                            <label for ="fv-modal" id = "fv-modal-back"></label>
+                        </div>
+
 
 
                     </div>
@@ -713,66 +735,6 @@
                         </table>
                     </div>
                 </section>
-
-                <div id = "comment-update-modal-box">
-                    <div id = "comment-update-modal-content">
-                        <div id = "comment-close">&times;</div>
-                        <section class ="title-container">
-                            댓글 수정
-                        </section>
-                        <!-- 추가도 동일 -->
-            
-                        <section class = "update-container">
-                            <div class = "update-info-container">
-                                <table>
-            
-                                    <tr>
-                                        <th> 게시물 명 </th>
-                                        <td>
-                                            <input type="text" readonly>
-                                            <!-- readonly :: 글 수정 불가하게 하기  -->
-                                        </td>
-                                    </tr>
-            
-                                    <tr>
-                                        <th> 댓글 내용</th>
-                                        <td>
-                                            <input type="text" autocapitalize="off">
-                                        </td>
-                                    </tr>
-            
-                                    <tr>
-                                        <th> 영화평점 </th>
-                                        <!-- 별점으로 표시하면 좋을 거 같음. -->
-                                        <td>
-                                            <input type="number">
-                                        </td>
-                                    </tr>
-            
-                                    <tr>
-                                        <th> 작성 및 수정일 </th>
-                                        <td>
-                                            <input type="text" readonly>
-                                        </td>
-                                    </tr>
-            
-                                </table>
-            
-            
-                            </div>
-                        </section>
-            
-                        <section class = "update-btn-container">
-                            <div class ="btn">
-                                수정하기
-                            </div>
-                            <div class ="btn">
-                                취소하기
-                            </div>
-                        </section>
-                    </div>
-                </div>
-
 
 
 
